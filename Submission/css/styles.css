@@ -180,3 +180,37 @@ footer {
     color: white;
     margin-top: 30px;
 }
+
+.menu-card{
+
+    background:white;
+
+    margin:20px auto;
+
+    padding:20px;
+
+    width:60%;
+
+    border-radius:10px;
+
+    box-shadow:0 0 8px gray;
+
+}
+
+#bannerCaption{
+    display:nome;
+    background: rgba(red, green, blue, alpha);
+    color: black;
+    padding:20px;
+    text-align: center;
+
+}
+#bannerCaption.show{
+    display: block;
+
+}
+#message{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}

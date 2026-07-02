@@ -1,0 +1,35 @@
+CAT 2 Implementation Notes
+
+Requirement 1:  Loop-rendered dynamic content.
+            - Created a JavaScript array of menu objects.
+            - Each menu object contains a required "name" property, together with price and available time.
+            - Used the forEach() method to dynamically display the menu items in the webpage instead of hardcoding them in HTML.
+
+
+Reguirement 2: Dynamic Add Remove Elements.
+            - Implemented dynamic menu management using JavaScript DOM manipulation.
+            - Menu items are generated dynamically using createElement(), textContent, and appendChild() instead of static HTML.
+            - Users can add new meals through a form, which creates new objects and stores them in the menu array using push().
+            - Each generated menu card includes a dynamically created Delete button with its own click event listener.
+            - Meals can be removed from the array using splice(index, 1), and the displayMenu() function re-renders the updated menu after every addition or deletion.
+
+
+Reguirement 3: Form Validation.
+              - Implemented client-side form validation using JavaScript.
+              - The application checks that the meal name and meal price fields are not empty before processing user input.
+              - Validation uses conditional if statements with trim() to prevent empty or whitespace-only values.
+              - When invalid input is detected, alert() displays an appropriate error message and return stops further execution.
+              - The form submission is controlled using event.preventDefault() to prevent the browser's default page refresh.
+
+
+Reguirement 4: Local Storage.
+              - Implemented persistent data storage using the browser's Local Storage API.
+              - Menu items are saved using localStorage.setItem() together with JSON.stringify() whenever a meal is added or removed.
+              - When the application starts, previously saved menu data is retrieved using localStorage.getItem(), converted back into a JavaScript array using JSON.parse(), and loaded into the application.
+              - This ensures that user-added meals remain available even after refreshing or reopening the webpage.
+
+
+Reguirement 5: Click-to-Reveal interaction
+              - Implemented a click-to-reveal interaction on the banner image using JavaScript and classList.toggle().
+              - When the user clicks the banner image, a CSS class is added or removed to show and hide a caption containing information about the chef.
+              - This improves user interaction by allowing content to be dynamically revealed without reloading the page. 
