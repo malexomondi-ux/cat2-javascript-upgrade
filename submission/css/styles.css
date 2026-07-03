@@ -169,9 +169,6 @@ table td {
     border: 1px solid #ccc;
 }
 
-/* =========================
-   FOOTER
-========================= */
 
 footer {
     text-align: center;
@@ -187,4 +184,33 @@ footer {
     margin: 15px auto;
     max-width: 500px;
     border-radius: 8px;
+}
+.review-form {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.review-form button,
+.delete-btn {
+    background-color: chocolate;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.delete-btn {
+    background-color: #a0522d;
+    margin-top: 5px;
 }
