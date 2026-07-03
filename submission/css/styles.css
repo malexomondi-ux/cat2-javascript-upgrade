@@ -180,3 +180,19 @@ footer {
     color: white;
     margin-top: 30px;
 }
+
+.menu-card{
+
+    background:white;
+
+    margin:20px auto;
+
+    padding:20px;
+
+    width:60%;
+
+    border-radius:10px;
+
+    box-shadow:0 0 8px gray;
+
+}
