@@ -108,3 +108,40 @@ reservationForm.addEventListener("submit", (event) => {
 
     reservationForm.reset();
 });
+
+function getStoredReviews() {
+    let saved = localStorage.getItem("customerReviews");
+    return saved !== null ? JSON.parse(saved) : [];
+}
+
+function saveStoredReviews(reviews) {
+    localStorage.setItem("customerReviews", JSON.stringify(reviews));
+}
+
+getStoredReviews().forEach(review => {
+    reviewNameInput.value = review.name;
+    reviewCommentInput.value = review.comment;
+    addReviewBtn.click();
+});
+
+let reviewObserver = new MutationObserver(() => {
+    let allCards = document.querySelectorAll("#testimonialList .testimonial-card");
+    let currentReviews = [];
+
+    allCards.forEach(card => {
+        let nameText = card.querySelector("h4").textContent;
+        let commentText = card.querySelector("p").textContent.replace(/^"|"$/g, "");
+
+        let isOriginal = testimonials.some(
+            t => t.name === nameText && t.comment === commentText
+        );
+
+        if (!isOriginal) {
+            currentReviews.push({ name: nameText, comment: commentText });
+        }
+    });
+
+    saveStoredReviews(currentReviews);
+});
+
+reviewObserver.observe(testimonialList, { childList: true });
