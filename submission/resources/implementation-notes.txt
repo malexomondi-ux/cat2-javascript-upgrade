@@ -1,4 +1,5 @@
 IMPLEMENTATION NOTES
+
 Hayley Kakanga Restaurant — CAT 2 JavaScript Upgrade
 
 
