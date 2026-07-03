@@ -290,3 +290,30 @@ footer {
     border-left: 4px solid red;
     color: #a10000;
 }
+
+
+#bannerWrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.banner-caption {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner-caption h3 {
+    color: white;
+    margin: 0 0 8px 0;
+}
+
+.banner-caption.show-caption {
+    display: block;
+}

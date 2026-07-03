@@ -145,3 +145,11 @@ let reviewObserver = new MutationObserver(() => {
 });
 
 reviewObserver.observe(testimonialList, { childList: true });
+
+
+let bannerImage = document.querySelector("#bannerImage");
+let bannerCaption = document.querySelector("#bannerCaption");
+
+bannerImage.addEventListener("click", () => {
+    bannerCaption.classList.toggle("show-caption");
+});
