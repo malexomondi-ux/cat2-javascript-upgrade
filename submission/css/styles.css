@@ -214,3 +214,79 @@ footer {
     background-color: #a0522d;
     margin-top: 5px;
 }
+
+/* =========================
+   RESERVATION FORM (updated)
+========================= */
+
+#reservationForm label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+#reservationForm input,
+#reservationForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#reservationForm button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#reservationForm button[type="submit"] {
+    background-color: chocolate;
+    color: white;
+}
+
+#reservationForm button[type="submit"]:hover {
+    background-color: #a0522d;
+}
+
+#reservationForm button[type="reset"] {
+    background-color: #eee;
+    color: #333;
+}
+
+#reservationForm button[type="reset"]:hover {
+    background-color: #ddd;
+}
+
+/* Feedback box shown after submit */
+.output-box {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff8e7;
+    text-align: left;
+}
+
+.output-box ul {
+    margin: 8px 0 0 0;
+    padding-left: 20px;
+}
+
+.success-text {
+    border-left: 4px solid green;
+    color: #1a5c1a;
+}
+
+.error-text {
+    border-left: 4px solid red;
+    color: #a10000;
+}

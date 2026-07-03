@@ -63,3 +63,48 @@ addReviewBtn.addEventListener("click", () => {
     reviewNameInput.value = "";
     reviewCommentInput.value = "";
 });
+
+let reservationForm = document.querySelector("#reservationForm");
+let reservationFeedback = document.querySelector("#reservationFeedback");
+
+reservationForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let name = document.querySelector("#resName").value.trim();
+    let date = document.querySelector("#resDate").value.trim();
+    let guests = document.querySelector("#resGuests").value.trim();
+    let message = document.querySelector("#resMessage").value.trim();
+
+    let errors = [];
+
+    if (name === "") {
+        errors.push("Please enter your name.");
+    }
+    if (date === "") {
+        errors.push("Please enter a reservation date.");
+    }
+    if (guests === "" || isNaN(guests) || Number(guests) <= 0) {
+        errors.push("Please enter a valid number of guests (at least 1).");
+    }
+
+    if (errors.length > 0) {
+        reservationFeedback.innerHTML = "<b>Please fix the following:</b><ul>" +
+            errors.map(err => "<li>" + err + "</li>").join("") +
+            "</ul>";
+        reservationFeedback.classList.remove("success-text");
+        reservationFeedback.classList.add("error-text");
+        return;
+    }
+
+    reservationFeedback.innerHTML =
+        "<b>Reservation Confirmed!</b><br>" +
+        "Name: " + name + "<br>" +
+        "Date: " + date + "<br>" +
+        "Guests: " + guests + "<br>" +
+        "Message: " + (message === "" ? "None" : message);
+
+    reservationFeedback.classList.remove("error-text");
+    reservationFeedback.classList.add("success-text");
+
+    reservationForm.reset();
+});

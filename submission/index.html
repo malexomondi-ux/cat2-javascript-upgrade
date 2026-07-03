@@ -169,26 +169,27 @@
                         
                     </section>
                     <section id="reservation">
-                        <h2>Reservation</h2>
-                     <form>  
-                     Message:<br>
-                    <textarea rows="5" cols="30"></textarea>
-                    
-                <br>
-                <input type="submit" name="submit" value="Submit"> 
-                <input type="reset"  value="Clear"> 
-                </form> 
-                </section>
-            
-                    <section>
-    
-                   <h3>Restaurant Information</h3>
+    <h2>Reservation</h2>
+    <form id="reservationForm">
+        <label for="resName">Full Name:</label>
+        <input type="text" id="resName" placeholder="Your name">
 
-                    <p>Address: Nairobi, Kenya</p>
-                    <p>Phone: +254 742865264</p>
-                    <p>Hours: 8:00 AM - 10:00 PM</p>
-    
-                    </section>
+        <label for="resDate">Reservation Date:</label>
+        <input type="text" id="resDate" placeholder="e.g. 12/08/2026">
+
+        <label for="resGuests">Number of Guests:</label>
+        <input type="text" id="resGuests" placeholder="e.g. 2">
+
+        <label for="resMessage">Message:</label>
+        <textarea id="resMessage" rows="5" cols="30" placeholder="Any special requests?"></textarea>
+
+        <br><br>
+        <button type="submit">Submit Reservation</button>
+        <button type="reset">Clear</button>
+    </form>
+
+    <div id="reservationFeedback" class="output-box"></div>
+</section>
         
         <footer>
             <hr>
