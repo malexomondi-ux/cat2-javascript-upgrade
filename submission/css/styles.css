@@ -180,3 +180,11 @@ footer {
     color: white;
     margin-top: 30px;
 }
+.testimonial-card {
+    background-color: #fff8e7;
+    border-left: 4px solid chocolate;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 500px;
+    border-radius: 8px;
+}
